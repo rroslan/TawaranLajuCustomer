@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
+import com.firebase.ui.auth.BuildConfig;
 import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,6 +18,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Collections;
+import java.util.UUID;
+
+import biz.eastservices.tawaranlaju.CustomerMapActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 123;
@@ -31,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null) {
             // already signed in
-            Intent intent = new Intent(MainActivity.this, DriverMapActivity.class);
+            Intent intent = new Intent(MainActivity.this, CustomerMapActivity.class);
             startActivity(intent);
             finish();
         } else {
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                Intent intent = new Intent(MainActivity.this, DriverMapActivity.class);
+                Intent intent = new Intent(MainActivity.this, CustomerMapActivity.class);
                 startActivity(intent);
                 finish();
                 return;
