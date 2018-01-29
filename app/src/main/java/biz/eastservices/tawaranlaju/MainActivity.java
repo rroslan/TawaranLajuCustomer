@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             // not signed in
             startMobileAuthentication();
         }
+
     }
 
     private void startMobileAuthentication() {
@@ -70,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         // RC_SIGN_IN is the request code you passed into startActivityForResult(...) when starting the sign in flow.
         if (requestCode == RC_SIGN_IN) {
             if (resultCode == RESULT_OK) {
-                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                /*FirebaseAuth mAuth = FirebaseAuth.getInstance();
                 String uid = mAuth.getCurrentUser().getUid();
                 String user_id = mAuth.getCurrentUser().getPhoneNumber();
                 //String user_phone = mAuth.getCurrentUser().getPhoneNumber();
@@ -80,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         Log.d(TAG, "onComplete: " + task.isSuccessful());
                     }
-                });
+                });*/
 
-                Intent intent = new Intent(MainActivity.this, CustomerMapActivity.class);
+                Intent intent = new Intent(MainActivity.this, CustomerSettingsActivity.class);
                 startActivity(intent);
                 finish();
                 return;

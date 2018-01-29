@@ -115,7 +115,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
         mSettings = (Button) findViewById(R.id.settings);
         mHistory = (Button) findViewById(R.id.history);
 
-        mLogout.setOnClickListener(new View.OnClickListener() {
+        /*mLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseAuth.getInstance().signOut();
@@ -124,7 +124,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
                 finish();
                 return;
             }
-        });
+        });*/
 
         mRequest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -171,7 +171,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
             }
         });
 
-        mHistory.setOnClickListener(new View.OnClickListener() {
+        /*mHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CustomerMapActivity.this, HistoryActivity.class);
@@ -179,7 +179,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
                 startActivity(intent);
                 return;
             }
-        });
+        });*/
 
         PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
                 getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
