@@ -156,7 +156,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
                     pickupLocation = new LatLng(mLastLocation.getLatitude(), mLastLocation.getLongitude());
                     pickupMarker = mMap.addMarker(new MarkerOptions().position(pickupLocation).title("Pickup Here").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_pickup)));
 
-                    mRequest.setText("Getting your Driver....");
+                    mRequest.setText("Getting your Vendor.....");
 
                     getClosestDriver();
                 }
@@ -240,7 +240,7 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
                                     getDriverLocation();
                                     getDriverInfo();
                                     getHasRideEnded();
-                                    mRequest.setText("Looking for Driver Location....");
+                                    mRequest.setText("Looking for Vendor Location....");
                                 }
                             }
                         }
@@ -323,9 +323,9 @@ public class CustomerMapActivity extends FragmentActivity implements OnMapReadyC
                     float distance = loc1.distanceTo(loc2);
 
                     if (distance<100){
-                        mRequest.setText("Driver's Here");
+                        mRequest.setText("Vendor's Here");
                     }else{
-                        mRequest.setText("Driver Found: " + String.valueOf(distance));
+                        mRequest.setText("Vendor Found: " + String.valueOf(distance));
                     }
 
 

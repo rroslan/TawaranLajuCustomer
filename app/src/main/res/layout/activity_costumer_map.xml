@@ -137,7 +137,7 @@
                 android:layout_gravity="bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="call Uber"
+                android:text="call Vendor"
                 android:id="@+id/request"/>
         </LinearLayout>
     </LinearLayout>
